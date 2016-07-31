@@ -1,0 +1,26 @@
+{
+  "name": "rest-api-job-queue",
+  "version": "1.0.0",
+  "description": "Massdrop api node",
+  "main": "../server/server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "lodash": "^4.14.1",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelserna/REST-API-Job-Queue.git"
+  },
+  "author": "Michael Serna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelserna/REST-API-Job-Queue/issues"
+  },
+  "homepage": "https://github.com/michaelserna/REST-API-Job-Queue#readme"
+}
