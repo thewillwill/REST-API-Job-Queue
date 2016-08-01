@@ -4,16 +4,17 @@ var bodyParser = require('body-parser');
 var _ = require('lodash');
 var morgan = require("morgan");
 
-var apiRouter = require('./../router/api-routes.js');
+var router = require('./../router/api-routes.js');
 
 
 //logs server activity to console
 app.use(morgan('dev'));
+//for parsing application/x--www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
-  //converts post data to json
+//converts post data to json
 app.use(bodyParser.json());
 //whenever req comes in for /api, mount 
-app.use('/api', apiRouter);
+app.use('/api/v1', router);
 
 
 app.use(function(err, req, res, next) {
@@ -27,4 +28,3 @@ var port = 3000;
 app.listen(3000, function() {
   console.log('App listening to port', port);
 });
-
