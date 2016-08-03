@@ -57,8 +57,7 @@ BarHawk
 
 # API Docs
 
-Create a new job with a post request
-(using http pie module instead of curl for readability)
+Create a new job with a post request (using http pie module below)
 
 ```http
 http POST localhost:3000/api/v1/url url=http://www.google.com
@@ -141,7 +140,7 @@ Successful response:
 Delete an individual job through id param:
 DELETE /api/v1/:id 
 ```http
- DELETE /api/v1/57a14624092083113344da9c url:'http://www.espn.com'
+ http DELETE localhost:3000/api/v1/57a14624092083113344da9c url:'http://www.espn.com'
 ```
 Successful response (return job that was deleted):
 ```http
