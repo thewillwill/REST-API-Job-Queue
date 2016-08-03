@@ -141,7 +141,7 @@ Successful response:
 Delete an individual job through id param:
 DELETE /api/v1/:id 
 ```http
- http DELETE localhost:3000/api/v1/57a14624092083113344da9c url:'http://www.espn.com'
+ DELETE /api/v1/57a14624092083113344da9c url:'http://www.espn.com'
 ```
 Successful response (return job that was deleted):
 ```http
