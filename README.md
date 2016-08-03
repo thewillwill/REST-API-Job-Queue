@@ -60,11 +60,11 @@ BarHawk
 Create a new job with a post request
 (using http pie module instead of curl for readability)
 
-```
+```http
 http POST localhost:3000/api/v1/url url=http://www.google.com
 ```
 Sucessful response:
-```
+```http
 
 {
     "__v": 0,
@@ -78,11 +78,11 @@ Sucessful response:
 
 Get all jobs:
 GET /api/v1/url
-```
+```http
 http GET localhost:3000/api/v1/url
 ```
 Successful response:
-```
+```http
 [
     {
         "__v": 0,
@@ -105,11 +105,11 @@ Successful response:
 
 Get an individual job through id param:
 GET /api/v1/:id
-```
+```http
 http GET localhost:3000/api/v1/57a140e194ffb91232e393c1
 ```
 Successful response:
-```
+```http
 {
     "__v": 0,
     "_id": "57a140e194ffb91232e393c1",
@@ -120,17 +120,13 @@ Successful response:
 }
 
 ```
-
-
 Update an individual job through id param:
 PUT /api/v1/:id job=oldUrl url=updatedUrl
-```
- http PUT localhost:3000/api/v1/57a14624092083113344da9c job=http://www.google.com url=http://www.espn.com
-
-url:'http://www.espn.com'
+```http
+ http PUT localhost:3000/api/v1/57a14624092083113344da9c job=http://www.google.com url=http://www.espn.com url:'http://www.espn.com'
 ```
 Successful response:
-```
+```http
 {
     "__v": 0,
     "_id": "57a14624092083113344da9c",
@@ -144,13 +140,11 @@ Successful response:
 
 Delete an individual job through id param:
 DELETE /api/v1/:id 
-```
- http DELETE localhost:3000/api/v1/57a14624092083113344da9c
-
-url:'http://www.espn.com'
+```http
+ http DELETE localhost:3000/api/v1/57a14624092083113344da9c url:'http://www.espn.com'
 ```
 Successful response (return job that was deleted):
-```
+```http
 {
     "__v": 0,
     "_id": "57a14624092083113344da9c",
