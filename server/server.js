@@ -28,3 +28,6 @@ var port = 3000;
 app.listen(3000, function() {
   console.log('App listening to port', port);
 });
+
+module.exports = app;
+

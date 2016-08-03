@@ -12,12 +12,17 @@
     "mongoose": "^4.5.7",
     "morgan": "^1.7.0",
     "request-promise": "^4.1.0",
+    "should": "^10.0.0",
     "valid-url": "^1.0.9",
     "validate.js": "^0.10.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "should-http": "0.0.4",
+    "supertest": "^2.0.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node testing/spec.js"
   },
   "repository": {
     "type": "git",

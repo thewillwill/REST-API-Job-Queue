@@ -8,7 +8,6 @@ var JobSchema = new mongoose.Schema({
   status: {
     type: String,
     default: 'Your job in in progress',
-    required: true
   },
   url: {
     type: String,
