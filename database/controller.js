@@ -37,7 +37,6 @@ exports.getOne = function(req, res, next) {
 
 exports.put = function(req, res, next) {
   var job = req.job;
-
   var update = req.body;
 
   _.merge(job, update);
@@ -46,6 +45,7 @@ exports.put = function(req, res, next) {
     if (err) {
       next(err);
     } else {
+
       res.json(saved);
     }
   });
@@ -64,8 +64,8 @@ exports.post = function(req, res, next) {
       next(err);
     })
     .then(function(job) {
-//checks for valid url syntax (alllows for both http & https)      
-validate({website: job.url}, {website: {url: true}});
+      //checks for valid url syntax (alllows for both http & https)      
+      validate({ website: job.url }, { website: { url: true } });
       rp(job.url)
         .then(function(html) {
           job.html = html;
