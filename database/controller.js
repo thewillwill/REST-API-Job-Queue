@@ -2,7 +2,6 @@ var Job = require('./schema-model');
 var rp = require('request-promise');
 var _ = require('lodash');
 var moment = require('moment');
-var validUrl = require('valid-url');
 var validate = require('validate.js');
 
 
@@ -53,11 +52,11 @@ exports.put = function(req, res, next) {
 
 exports.post = function(req, res, next) {
   var newjob = req.body;
+  //format date
   newjob.createdAt = moment().format('MMMM Do YYYY, h:mm:ss a');
 
   Job.create(newjob)
     .then(function(job) {
-      //job.status = 'Your job in in progress';
       res.json(job);
       return job;
     }, function(err) {
@@ -72,7 +71,7 @@ exports.post = function(req, res, next) {
           job.status = 'Your job is completed';
           job.save();
         }, function(err) {
-          console.log('Sorry, your url is active', err.message);
+          console.log('Sorry, your url is not active', err.message);
           next(err);
         })
     }, function(err) {

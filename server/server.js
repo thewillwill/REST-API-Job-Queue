@@ -6,6 +6,7 @@ var morgan = require("morgan");
 
 var router = require('./../router/api-routes.js');
 
+//app.use- application level middleware 
 
 //logs server activity to console
 app.use(morgan('dev'));

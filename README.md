@@ -28,7 +28,6 @@ To get started, run these commands from the terminal:
 $ git clone https://github.com/michaelserna/REST-API-Job-Queue.git
 $ cd REST-API-Job-Queue
 $ npm install
-$ npm start
 ```
 
 Testing
@@ -43,7 +42,7 @@ File Structure
 ==========
 
 ```
-BarHawk
+REST-API-Job-Queue
   |-database
     |---controllers
     |---schema-model           

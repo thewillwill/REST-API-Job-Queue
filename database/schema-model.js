@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+//because mongoose promises are depreciated 
 mongoose.Promise = require('bluebird');
 
 //connects mongo db
